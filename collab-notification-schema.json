@@ -1,0 +1,101 @@
+{   "title": "configObj",
+	"description": "Handle Cancer Collaboratory infrastructure messages and statuses",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"status": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["component", "title", "health"],
+				"additionalProperties": false,
+				"properties": {
+					"component": {
+						"type": "string",
+						"description": "Short name of the infrastructure component",
+						"enum": [
+							"COMPUTE", "BLOC_STORAGE", "OBJECT_STORAGE", "NETWORKING", "IMAGES", "AUTHENTICATION", "DASHBOARD"
+						]
+					},
+					"title": {
+						"type": "string",
+						"description": "Name of the component in a human readable fashion"
+					},
+					"health": {
+						"type": "string",
+						"description": "Health of the component",
+						"enum": [
+							"INFO", "WARNING", "ERROR"
+						]
+					},
+					"message": {
+						"type": ["string", "null"],
+						"description": "Specify additional text or explanations to be attached to the status"
+					}
+				}
+			}
+		},
+		"notifications": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["level", "message"],
+				"properties": {
+					"level": {
+						"type": "string",
+						"description": "Banner importance level",
+						"enum": [
+							"DEBUG", "INFO", "WARNING", "ERROR"
+						]
+					},
+					"message": {
+						"type": "string",
+						"description": "Message content"
+					},
+					"link": {
+						"type": ["string", "null"],
+						"description": "Link to obtain further details about the message"
+					},
+					"dismissable": {
+						"type": "boolean",
+						"description": "Can the banner be dismissable by the user"
+					}
+				}
+			}
+		},
+      "resources": {
+          "type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["resource","title","used","available"],
+				"properties": {
+                    "resource": {
+						"type": "string",
+						"description": "Short name of the resource",
+						"enum": [
+							"CEPH", "CORES", "RAM"
+						]
+					},
+					"title": {
+						"type": "string",
+						"description": "Name of the resource in a human readable fashion"
+					},
+					"used": {
+						"type": "number",
+						"description": "Resource consumption"
+					},
+					"available": {
+						"type": "number",
+						"description": "Total resources available"
+					},
+					"units": {
+						"type": ["string","null"],
+						"description": "The units (if any) in which the resource consumption is measured"
+					}
+				}
+			}
+      }
+	}
+}

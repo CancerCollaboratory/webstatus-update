@@ -1,0 +1,10 @@
+scp_command: echo scp
+host: user@www.upload.com
+path: /put/file/here
+json_file: validated.json
+remote_json_file: the_destination_file_name
+notifications_file: notifications.yaml
+resources_file: resources.yaml
+status_file: status.yaml
+schema_file: collab-notification-schema.json
+

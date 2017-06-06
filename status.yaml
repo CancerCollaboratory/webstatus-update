@@ -1,0 +1,32 @@
+status:
+  -
+    component: COMPUTE
+    title: Compute
+    health: INFO
+  -
+    component: BLOC_STORAGE
+    title: Block Storage/Volume
+    health: INFO
+  -
+    component: OBJECT_STORAGE
+    title: Object Storage
+    message: Warning! Object storage is at 98% capacity
+    health: WARNING
+  -
+    component: NETWORKING
+    title: Networking
+    health: ERROR
+    message: The network will remain down until we catch all the squirrels who keep chewing through the network cables.
+  -
+    component: IMAGES
+    title: Images/Snapshots
+    health: INFO
+  -
+    component: AUTHENTICATION
+    title: AuTHenTiCAtiON
+    message: Authentication has not been hacked by anyone. Everything is perfectly fine.
+    health: INFO
+  -
+    component: DASHBOARD
+    title: Dashboard
+    health: INFO

@@ -1,0 +1,18 @@
+resources:
+  -
+    resource: CEPH
+    title: Ceph Used/Available
+    used: 595
+    available: 569
+    units: TB
+  -
+    resource: CORES
+    title: VM Cores Used/Available
+    used: 681
+    available: 2592
+  -
+    resource: RAM
+    title: VM RAM Used/Available
+    used: 5000
+    available: 18000
+    units: GB

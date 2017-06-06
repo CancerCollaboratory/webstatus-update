@@ -1,0 +1,14 @@
+notifications:
+  -
+    level: DEBUG
+    message: Coffee Supply Level (4.5% remaining)
+    link: http://www.howto.org/HowToMakeCoffee.html
+  -
+    level: WARNING
+    message: Coffee Supply Levels Dangerously Low (below 5%)
+    link: http://www.info.org/EffectsOfLowCoffeeLevelsOnWorkplaceProductivity.html
+  -
+    level:  ERROR
+    message: Out of Coffee error -- Developers Halted
+    link: http://www.developer911.org/HowToApplyCoffeeToUnbrickALockedDeveloper.html
+    dismissable: false
